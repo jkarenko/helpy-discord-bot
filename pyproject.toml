@@ -4,13 +4,15 @@ version = "0.1.0"
 description = ""
 authors = ["jkarenko <juho.karenko@gmail.com>"]
 readme = "README.md"
-packages = [{include = "helpy_discord_bot"}]
+packages = [{ include = "helpy_discord_bot" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-discord = "^2.2.3"
 python-dotenv = "^1.0.0"
+discord-py = "^2.2.3"
 
+[tool.poetry.scripts]
+helpy-discord-bot = "helpy_discord_bot.__main__:main"
 
 [build-system]
 requires = ["poetry-core"]
